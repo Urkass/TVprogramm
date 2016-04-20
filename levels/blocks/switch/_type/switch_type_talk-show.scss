@@ -1,0 +1,15 @@
+.switch_type_talk-show {
+  display: none;
+}
+.switch_type_talk-show:checked + .switch__label {
+  background: $color_talk-show;
+}
+.switch_type_talk-show:checked + .switch__label:before, .switch_type_talk-show:checked + .switch__label:after {
+  background: $color-light_talk-show;
+}
+.switch_type_talk-show:checked ~ * .broadcast{
+  color: $grey2;
+}
+.switch_type_talk-show:checked ~ * .broadcast_type_talk-show{
+  color: $color_talk-show !important;
+}

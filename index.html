@@ -10,13 +10,36 @@
     <link rel="stylesheet" href="/node_modules/hamburgers/dist/hamburgers.min.css">
 </head>
 <body>
+    <!--<input type="checkbox" id="checkboxArrival" checked="checked"/>
+    <label id="labelArrival">Прилет</label>
+    <input type="checkbox" id="checkboxDeparture" />
+    <label id="labelDeparture">Вылет</label>-->
+    
+    <input class="switch switch_type_movie" type="checkbox" id="switch_type_movie">
+    <label class="switch__label switch__label_type_movie" for="switch_type_movie"></label>
+    <span class="switch__name switch__name_type_movie"></span>
+    <input class="switch switch_type_talk-show" type="checkbox" id="switch_type_talk-show">
+    <label class="switch__label switch__label_type_talk-show" for="switch_type_talk-show"></label>
+    <span class="switch__name switch__name_type_talk-show"></span>
+    <input class="switch switch_type_series" type="checkbox" id="switch_type_series">
+    <label class="switch__label switch__label_type_series" for="switch_type_series"></label>
+    <span class="switch__name switch__name_type_series"></span>
+    <input class="switch switch_type_news" type="checkbox" id="switch_type_news">
+    <label class="switch__label switch__label_type_news" for="switch_type_news"></label>
+    <span class="switch__name switch__name_type_news"></span>
+    <input class="switch switch_type_sport" type="checkbox" id="switch_type_sport">
+    <label class="switch__label switch__label_type_sport" for="switch_type_sport"></label>
+    <span class="switch__name switch__name_type_sport"></span>
+    <!--По бэму нельзя использовать элемент вне его блока, но в данной ситуации я задался целью не использовать js,
+    я не могу обернуть элементы в обертку блока, тк родители передач, которые мы выделяем цветом в общем списке, должны быть соседями
+     чекбоксов-->
     <div class="container">
         <div class="channel">
             <div class="channel__content">
                 <div class="channel__image channel__image_content_1"></div>
                 <span class="channel__title">Звезда</span>
                 <ul class="channel__list">
-                    <li class="channel__broadcast broadcast">
+                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">03:55</span>
                         <span class="broadcast__name">Чемпион мира</span>
                     </li>
@@ -24,7 +47,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_talk-show">
                         <span class="broadcast__time">06:00</span>
                         <span class="broadcast__name">&quot;Звезда на &quot;Звезде&quot; с Александром Стриженовым</span>
                     </li>
@@ -32,7 +55,7 @@
                         <div class="popup__image_type_talk-show popup__image"></div>
                         <div class="popup__format popup__format_type_talk-show"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_series">
                         <span class="broadcast__time">06:45</span>
                         <span class="broadcast__name">Служу России!</span>
                     </li>
@@ -40,7 +63,7 @@
                         <div class="popup__image_type_series popup__image"></div>
                         <div class="popup__format popup__format_type_series"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">07:25</span>
                         <span class="broadcast__name">Александр Маленький</span>
                     </li>
@@ -48,7 +71,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">09:00</span>
                         <span class="broadcast__name">Новости дня</span>
                     </li>
@@ -56,7 +79,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">09:15</span>
                         <span class="broadcast__name">Александр Маленький</span>
                     </li>
@@ -64,7 +87,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_series">
                         <span class="broadcast__time">09:50</span>
                         <span class="broadcast__name">Смерть шпионам! 1-я и 2-я серии</span>
                     </li>
@@ -72,7 +95,7 @@
                         <div class="popup__image_type_series popup__image"></div>
                         <div class="popup__format popup__format_type_series"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">10:00</span>
                         <span class="broadcast__name">Военные новости</span>
                     </li>
@@ -80,7 +103,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_series">
                         <span class="broadcast__time">10:05</span>
                         <span class="broadcast__name">Смерть шпионам! 1-я и 2-я серии</span>
                     </li>
@@ -88,7 +111,7 @@
                         <div class="popup__image_type_series popup__image"></div>
                         <div class="popup__format popup__format_type_series"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">12:00</span>
                         <span class="broadcast__name">Процесс</span>
                     </li>
@@ -96,7 +119,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">13:00</span>
                         <span class="broadcast__name">Новости дня</span>
                     </li>
@@ -104,7 +127,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">13:15</span>
                         <span class="broadcast__name">Специальный репортаж</span>
                     </li>
@@ -112,7 +135,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">13:40</span>
                         <span class="broadcast__name">Оружие Победы</span>
                     </li>
@@ -120,7 +143,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">14:00</span>
                         <span class="broadcast__name">Военные новости</span>
                     </li>
@@ -128,7 +151,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_series">
                         <span class="broadcast__time">14:05</span>
                         <span class="broadcast__name">Тульский-Токарев. 5-я - 8-я серии</span>
                     </li>
@@ -136,7 +159,7 @@
                         <div class="popup__image_type_series popup__image"></div>
                         <div class="popup__format popup__format_type_series"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">18:00</span>
                         <span class="broadcast__name">Новости дня</span>
                     </li>
@@ -144,7 +167,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">18:30</span>
                         <span class="broadcast__name">Истребители Второй мировой войны. Фильм 2-й</span>
                     </li>
@@ -152,7 +175,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">19:20</span>
                         <span class="broadcast__name">&quot;Легенды армии&quot; с Александром Маршалом. Виталий Попков</span>
                     </li>
@@ -160,7 +183,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_series">
                         <span class="broadcast__time">20:05</span>
                         <span class="broadcast__name">Смерть шпионам! 3-я и 4-я серии</span>
                     </li>
@@ -168,7 +191,7 @@
                         <div class="popup__image_type_series popup__image"></div>
                         <div class="popup__format popup__format_type_series"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">22:10</span>
                         <span class="broadcast__name">Новости дня</span>
                     </li>
@@ -176,7 +199,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_talk-show">
                         <span class="broadcast__time">22:30</span>
                         <span class="broadcast__name">&quot;Звезда на &quot;Звезде&quot; с Александром Стриженовым</span>
                     </li>
@@ -184,7 +207,7 @@
                         <div class="popup__image_type_talk-show popup__image"></div>
                         <div class="popup__format popup__format_type_talk-show"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">23:15</span>
                         <span class="broadcast__name">Меченый атом</span>
                     </li>
@@ -192,7 +215,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">01:15</span>
                         <span class="broadcast__name">Это начиналось так...</span>
                     </li>
@@ -200,7 +223,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">03:10</span>
                         <span class="broadcast__name">Запасной аэродром</span>
                     </li>
@@ -216,7 +239,7 @@
                 <div class="channel__image channel__image_content_2"></div>
                 <span class="channel__title">Первый</span>
                 <ul class="channel__list">
-                    <li class="channel__broadcast broadcast">
+                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">03:55</span>
                         <span class="broadcast__name">Чемпион мира</span>
                     </li>
@@ -224,7 +247,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_talk-show">
                         <span class="broadcast__time">06:00</span>
                         <span class="broadcast__name">&quot;Звезда на &quot;Звезде&quot; с Александром Стриженовым</span>
                     </li>
@@ -232,7 +255,7 @@
                         <div class="popup__image_type_talk-show popup__image"></div>
                         <div class="popup__format popup__format_type_talk-show"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_series">
                         <span class="broadcast__time">06:45</span>
                         <span class="broadcast__name">Служу России!</span>
                     </li>
@@ -240,7 +263,7 @@
                         <div class="popup__image_type_series popup__image"></div>
                         <div class="popup__format popup__format_type_series"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">07:25</span>
                         <span class="broadcast__name">Александр Маленький</span>
                     </li>
@@ -248,7 +271,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">09:00</span>
                         <span class="broadcast__name">Новости дня</span>
                     </li>
@@ -256,7 +279,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">09:15</span>
                         <span class="broadcast__name">Александр Маленький</span>
                     </li>
@@ -264,7 +287,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_series">
                         <span class="broadcast__time">09:50</span>
                         <span class="broadcast__name">Смерть шпионам! 1-я и 2-я серии</span>
                     </li>
@@ -272,7 +295,7 @@
                         <div class="popup__image_type_series popup__image"></div>
                         <div class="popup__format popup__format_type_series"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">10:00</span>
                         <span class="broadcast__name">Военные новости</span>
                     </li>
@@ -280,7 +303,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_series">
                         <span class="broadcast__time">10:05</span>
                         <span class="broadcast__name">Смерть шпионам! 1-я и 2-я серии</span>
                     </li>
@@ -288,7 +311,7 @@
                         <div class="popup__image_type_series popup__image"></div>
                         <div class="popup__format popup__format_type_series"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">12:00</span>
                         <span class="broadcast__name">Процесс</span>
                     </li>
@@ -296,7 +319,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">13:00</span>
                         <span class="broadcast__name">Новости дня</span>
                     </li>
@@ -304,7 +327,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">13:15</span>
                         <span class="broadcast__name">Специальный репортаж</span>
                     </li>
@@ -312,7 +335,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">13:40</span>
                         <span class="broadcast__name">Оружие Победы</span>
                     </li>
@@ -320,7 +343,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">14:00</span>
                         <span class="broadcast__name">Военные новости</span>
                     </li>
@@ -328,7 +351,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_series">
                         <span class="broadcast__time">14:05</span>
                         <span class="broadcast__name">Тульский-Токарев. 5-я - 8-я серии</span>
                     </li>
@@ -336,7 +359,7 @@
                         <div class="popup__image_type_series popup__image"></div>
                         <div class="popup__format popup__format_type_series"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">18:00</span>
                         <span class="broadcast__name">Новости дня</span>
                     </li>
@@ -344,7 +367,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">18:30</span>
                         <span class="broadcast__name">Истребители Второй мировой войны. Фильм 2-й</span>
                     </li>
@@ -352,7 +375,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">19:20</span>
                         <span class="broadcast__name">&quot;Легенды армии&quot; с Александром Маршалом. Виталий Попков</span>
                     </li>
@@ -360,7 +383,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_series">
                         <span class="broadcast__time">20:05</span>
                         <span class="broadcast__name">Смерть шпионам! 3-я и 4-я серии</span>
                     </li>
@@ -368,7 +391,7 @@
                         <div class="popup__image_type_series popup__image"></div>
                         <div class="popup__format popup__format_type_series"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">22:10</span>
                         <span class="broadcast__name">Новости дня</span>
                     </li>
@@ -376,7 +399,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_talk-show">
                         <span class="broadcast__time">22:30</span>
                         <span class="broadcast__name">&quot;Звезда на &quot;Звезде&quot; с Александром Стриженовым</span>
                     </li>
@@ -384,7 +407,7 @@
                         <div class="popup__image_type_talk-show popup__image"></div>
                         <div class="popup__format popup__format_type_talk-show"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">23:15</span>
                         <span class="broadcast__name">Меченый атом</span>
                     </li>
@@ -392,7 +415,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">01:15</span>
                         <span class="broadcast__name">Это начиналось так...</span>
                     </li>
@@ -400,7 +423,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">03:10</span>
                         <span class="broadcast__name">Запасной аэродром</span>
                     </li>
@@ -416,7 +439,7 @@
                 <div class="channel__image channel__image_content_3"></div>
                 <span class="channel__title">Россия</span>
                 <ul class="channel__list">
-                    <li class="channel__broadcast broadcast">
+                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">03:55</span>
                         <span class="broadcast__name">Чемпион мира</span>
                     </li>
@@ -424,7 +447,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_talk-show">
                         <span class="broadcast__time">06:00</span>
                         <span class="broadcast__name">&quot;Звезда на &quot;Звезде&quot; с Александром Стриженовым</span>
                     </li>
@@ -432,7 +455,7 @@
                         <div class="popup__image_type_talk-show popup__image"></div>
                         <div class="popup__format popup__format_type_talk-show"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_series">
                         <span class="broadcast__time">06:45</span>
                         <span class="broadcast__name">Служу России!</span>
                     </li>
@@ -440,7 +463,7 @@
                         <div class="popup__image_type_series popup__image"></div>
                         <div class="popup__format popup__format_type_series"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">07:25</span>
                         <span class="broadcast__name">Александр Маленький</span>
                     </li>
@@ -448,7 +471,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">09:00</span>
                         <span class="broadcast__name">Новости дня</span>
                     </li>
@@ -456,7 +479,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">09:15</span>
                         <span class="broadcast__name">Александр Маленький</span>
                     </li>
@@ -464,7 +487,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_series">
                         <span class="broadcast__time">09:50</span>
                         <span class="broadcast__name">Смерть шпионам! 1-я и 2-я серии</span>
                     </li>
@@ -472,7 +495,7 @@
                         <div class="popup__image_type_series popup__image"></div>
                         <div class="popup__format popup__format_type_series"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">10:00</span>
                         <span class="broadcast__name">Военные новости</span>
                     </li>
@@ -480,7 +503,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_series">
                         <span class="broadcast__time">10:05</span>
                         <span class="broadcast__name">Смерть шпионам! 1-я и 2-я серии</span>
                     </li>
@@ -488,7 +511,7 @@
                         <div class="popup__image_type_series popup__image"></div>
                         <div class="popup__format popup__format_type_series"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">12:00</span>
                         <span class="broadcast__name">Процесс</span>
                     </li>
@@ -496,7 +519,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">13:00</span>
                         <span class="broadcast__name">Новости дня</span>
                     </li>
@@ -504,7 +527,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">13:15</span>
                         <span class="broadcast__name">Специальный репортаж</span>
                     </li>
@@ -512,7 +535,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">13:40</span>
                         <span class="broadcast__name">Оружие Победы</span>
                     </li>
@@ -520,7 +543,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">14:00</span>
                         <span class="broadcast__name">Военные новости</span>
                     </li>
@@ -528,7 +551,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_series">
                         <span class="broadcast__time">14:05</span>
                         <span class="broadcast__name">Тульский-Токарев. 5-я - 8-я серии</span>
                     </li>
@@ -536,7 +559,7 @@
                         <div class="popup__image_type_series popup__image"></div>
                         <div class="popup__format popup__format_type_series"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">18:00</span>
                         <span class="broadcast__name">Новости дня</span>
                     </li>
@@ -544,7 +567,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">18:30</span>
                         <span class="broadcast__name">Истребители Второй мировой войны. Фильм 2-й</span>
                     </li>
@@ -552,7 +575,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">19:20</span>
                         <span class="broadcast__name">&quot;Легенды армии&quot; с Александром Маршалом. Виталий Попков</span>
                     </li>
@@ -560,7 +583,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_series">
                         <span class="broadcast__time">20:05</span>
                         <span class="broadcast__name">Смерть шпионам! 3-я и 4-я серии</span>
                     </li>
@@ -568,7 +591,7 @@
                         <div class="popup__image_type_series popup__image"></div>
                         <div class="popup__format popup__format_type_series"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">22:10</span>
                         <span class="broadcast__name">Новости дня</span>
                     </li>
@@ -576,7 +599,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_talk-show">
                         <span class="broadcast__time">22:30</span>
                         <span class="broadcast__name">&quot;Звезда на &quot;Звезде&quot; с Александром Стриженовым</span>
                     </li>
@@ -584,7 +607,7 @@
                         <div class="popup__image_type_talk-show popup__image"></div>
                         <div class="popup__format popup__format_type_talk-show"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">23:15</span>
                         <span class="broadcast__name">Меченый атом</span>
                     </li>
@@ -592,7 +615,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">01:15</span>
                         <span class="broadcast__name">Это начиналось так...</span>
                     </li>
@@ -600,7 +623,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">03:10</span>
                         <span class="broadcast__name">Запасной аэродром</span>
                     </li>
@@ -616,7 +639,7 @@
                 <div class="channel__image channel__image_content_4"></div>
                 <span class="channel__title">Матч ТВ</span>
                 <ul class="channel__list">
-                    <li class="channel__broadcast broadcast">
+                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">03:55</span>
                         <span class="broadcast__name">Чемпион мира</span>
                     </li>
@@ -624,7 +647,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_talk-show">
                         <span class="broadcast__time">06:00</span>
                         <span class="broadcast__name">&quot;Звезда на &quot;Звезде&quot; с Александром Стриженовым</span>
                     </li>
@@ -632,7 +655,7 @@
                         <div class="popup__image_type_talk-show popup__image"></div>
                         <div class="popup__format popup__format_type_talk-show"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_series">
                         <span class="broadcast__time">06:45</span>
                         <span class="broadcast__name">Служу России!</span>
                     </li>
@@ -640,7 +663,7 @@
                         <div class="popup__image_type_series popup__image"></div>
                         <div class="popup__format popup__format_type_series"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">07:25</span>
                         <span class="broadcast__name">Александр Маленький</span>
                     </li>
@@ -648,7 +671,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">09:00</span>
                         <span class="broadcast__name">Новости дня</span>
                     </li>
@@ -656,7 +679,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">09:15</span>
                         <span class="broadcast__name">Александр Маленький</span>
                     </li>
@@ -664,7 +687,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_series">
                         <span class="broadcast__time">09:50</span>
                         <span class="broadcast__name">Смерть шпионам! 1-я и 2-я серии</span>
                     </li>
@@ -672,7 +695,7 @@
                         <div class="popup__image_type_series popup__image"></div>
                         <div class="popup__format popup__format_type_series"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">10:00</span>
                         <span class="broadcast__name">Военные новости</span>
                     </li>
@@ -680,7 +703,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_series">
                         <span class="broadcast__time">10:05</span>
                         <span class="broadcast__name">Смерть шпионам! 1-я и 2-я серии</span>
                     </li>
@@ -688,7 +711,7 @@
                         <div class="popup__image_type_series popup__image"></div>
                         <div class="popup__format popup__format_type_series"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">12:00</span>
                         <span class="broadcast__name">Процесс</span>
                     </li>
@@ -696,7 +719,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">13:00</span>
                         <span class="broadcast__name">Новости дня</span>
                     </li>
@@ -704,7 +727,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">13:15</span>
                         <span class="broadcast__name">Специальный репортаж</span>
                     </li>
@@ -712,7 +735,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">13:40</span>
                         <span class="broadcast__name">Оружие Победы</span>
                     </li>
@@ -720,7 +743,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">14:00</span>
                         <span class="broadcast__name">Военные новости</span>
                     </li>
@@ -728,7 +751,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_series">
                         <span class="broadcast__time">14:05</span>
                         <span class="broadcast__name">Тульский-Токарев. 5-я - 8-я серии</span>
                     </li>
@@ -736,7 +759,7 @@
                         <div class="popup__image_type_series popup__image"></div>
                         <div class="popup__format popup__format_type_series"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">18:00</span>
                         <span class="broadcast__name">Новости дня</span>
                     </li>
@@ -744,7 +767,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">18:30</span>
                         <span class="broadcast__name">Истребители Второй мировой войны. Фильм 2-й</span>
                     </li>
@@ -752,7 +775,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">19:20</span>
                         <span class="broadcast__name">&quot;Легенды армии&quot; с Александром Маршалом. Виталий Попков</span>
                     </li>
@@ -760,7 +783,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_series">
                         <span class="broadcast__time">20:05</span>
                         <span class="broadcast__name">Смерть шпионам! 3-я и 4-я серии</span>
                     </li>
@@ -768,7 +791,7 @@
                         <div class="popup__image_type_series popup__image"></div>
                         <div class="popup__format popup__format_type_series"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">22:10</span>
                         <span class="broadcast__name">Новости дня</span>
                     </li>
@@ -776,7 +799,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_talk-show">
                         <span class="broadcast__time">22:30</span>
                         <span class="broadcast__name">&quot;Звезда на &quot;Звезде&quot; с Александром Стриженовым</span>
                     </li>
@@ -784,7 +807,7 @@
                         <div class="popup__image_type_talk-show popup__image"></div>
                         <div class="popup__format popup__format_type_talk-show"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">23:15</span>
                         <span class="broadcast__name">Меченый атом</span>
                     </li>
@@ -792,7 +815,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">01:15</span>
                         <span class="broadcast__name">Это начиналось так...</span>
                     </li>
@@ -800,7 +823,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">03:10</span>
                         <span class="broadcast__name">Запасной аэродром</span>
                     </li>
@@ -816,7 +839,7 @@
                 <div class="channel__image channel__image_content_5"></div>
                 <span class="channel__title">Рен ТВ</span>
                 <ul class="channel__list">
-                    <li class="channel__broadcast broadcast">
+                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">03:55</span>
                         <span class="broadcast__name">Чемпион мира</span>
                     </li>
@@ -824,7 +847,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_talk-show">
                         <span class="broadcast__time">06:00</span>
                         <span class="broadcast__name">&quot;Звезда на &quot;Звезде&quot; с Александром Стриженовым</span>
                     </li>
@@ -832,7 +855,7 @@
                         <div class="popup__image_type_talk-show popup__image"></div>
                         <div class="popup__format popup__format_type_talk-show"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_series">
                         <span class="broadcast__time">06:45</span>
                         <span class="broadcast__name">Служу России!</span>
                     </li>
@@ -840,7 +863,7 @@
                         <div class="popup__image_type_series popup__image"></div>
                         <div class="popup__format popup__format_type_series"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">07:25</span>
                         <span class="broadcast__name">Александр Маленький</span>
                     </li>
@@ -848,7 +871,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">09:00</span>
                         <span class="broadcast__name">Новости дня</span>
                     </li>
@@ -856,7 +879,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">09:15</span>
                         <span class="broadcast__name">Александр Маленький</span>
                     </li>
@@ -864,7 +887,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_series">
                         <span class="broadcast__time">09:50</span>
                         <span class="broadcast__name">Смерть шпионам! 1-я и 2-я серии</span>
                     </li>
@@ -872,7 +895,7 @@
                         <div class="popup__image_type_series popup__image"></div>
                         <div class="popup__format popup__format_type_series"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">10:00</span>
                         <span class="broadcast__name">Военные новости</span>
                     </li>
@@ -880,7 +903,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_series">
                         <span class="broadcast__time">10:05</span>
                         <span class="broadcast__name">Смерть шпионам! 1-я и 2-я серии</span>
                     </li>
@@ -888,7 +911,7 @@
                         <div class="popup__image_type_series popup__image"></div>
                         <div class="popup__format popup__format_type_series"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">12:00</span>
                         <span class="broadcast__name">Процесс</span>
                     </li>
@@ -896,7 +919,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">13:00</span>
                         <span class="broadcast__name">Новости дня</span>
                     </li>
@@ -904,7 +927,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">13:15</span>
                         <span class="broadcast__name">Специальный репортаж</span>
                     </li>
@@ -912,7 +935,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">13:40</span>
                         <span class="broadcast__name">Оружие Победы</span>
                     </li>
@@ -920,7 +943,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">14:00</span>
                         <span class="broadcast__name">Военные новости</span>
                     </li>
@@ -928,7 +951,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_series">
                         <span class="broadcast__time">14:05</span>
                         <span class="broadcast__name">Тульский-Токарев. 5-я - 8-я серии</span>
                     </li>
@@ -936,7 +959,7 @@
                         <div class="popup__image_type_series popup__image"></div>
                         <div class="popup__format popup__format_type_series"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">18:00</span>
                         <span class="broadcast__name">Новости дня</span>
                     </li>
@@ -944,7 +967,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">18:30</span>
                         <span class="broadcast__name">Истребители Второй мировой войны. Фильм 2-й</span>
                     </li>
@@ -952,7 +975,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">19:20</span>
                         <span class="broadcast__name">&quot;Легенды армии&quot; с Александром Маршалом. Виталий Попков</span>
                     </li>
@@ -960,7 +983,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_series">
                         <span class="broadcast__time">20:05</span>
                         <span class="broadcast__name">Смерть шпионам! 3-я и 4-я серии</span>
                     </li>
@@ -968,7 +991,7 @@
                         <div class="popup__image_type_series popup__image"></div>
                         <div class="popup__format popup__format_type_series"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_news">
                         <span class="broadcast__time">22:10</span>
                         <span class="broadcast__name">Новости дня</span>
                     </li>
@@ -976,7 +999,7 @@
                         <div class="popup__image_type_news popup__image"></div>
                         <div class="popup__format popup__format_type_news"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_talk-show">
                         <span class="broadcast__time">22:30</span>
                         <span class="broadcast__name">&quot;Звезда на &quot;Звезде&quot; с Александром Стриженовым</span>
                     </li>
@@ -984,7 +1007,7 @@
                         <div class="popup__image_type_talk-show popup__image"></div>
                         <div class="popup__format popup__format_type_talk-show"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">23:15</span>
                         <span class="broadcast__name">Меченый атом</span>
                     </li>
@@ -992,7 +1015,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">01:15</span>
                         <span class="broadcast__name">Это начиналось так...</span>
                     </li>
@@ -1000,7 +1023,7 @@
                         <div class="popup__image_type_movie popup__image"></div>
                         <div class="popup__format popup__format_type_movie"></div>
                         <div class="popup__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi, cupiditate ducimus et itaque mollitia ut voluptas voluptate? Beatae consectetur esse est facilis iure iusto libero minima, mollitia necessitatibus nisi, non obcaecati praesentium, qui saepe suscipit velit voluptate? Aliquid amet blanditiis consectetur doloremque ducimus earum exercitationem iste laborum minus nemo quae quas sint sit sunt temporibus voluptas, voluptate. Asperiores!</div>
-                    </div>                    <li class="channel__broadcast broadcast">
+                    </div>                    <li class="channel__broadcast broadcast broadcast_type_movie">
                         <span class="broadcast__time">03:10</span>
                         <span class="broadcast__name">Запасной аэродром</span>
                     </li>

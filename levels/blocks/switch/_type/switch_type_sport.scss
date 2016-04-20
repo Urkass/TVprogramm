@@ -1,0 +1,15 @@
+.switch_type_sport {
+  display: none;
+}
+.switch_type_sport:checked + .switch__label {
+  background: $color_sport;
+}
+.switch_type_sport:checked + .switch__label:before, .switch_type_sport:checked + .switch__label:after {
+  background: $color-light_sport;
+}
+.switch_type_sport:checked ~ * .broadcast{
+  color: $grey2;
+}
+.switch_type_sport:checked ~ * .broadcast_type_sport{
+  color: $color_sport !important;
+}

@@ -1,0 +1,13 @@
+<!--<input type="checkbox" id="checkboxArrival" checked="checked"/>
+<label id="labelArrival">Прилет</label>
+<input type="checkbox" id="checkboxDeparture" />
+<label id="labelDeparture">Вылет</label>-->
+
+{{> switch type='movie'}}
+{{> switch type='talk-show'}}
+{{> switch type='series'}}
+{{> switch type='news'}}
+{{> switch type='sport'}}
+<!--По бэму нельзя использовать элемент вне его блока, но в данной ситуации я задался целью не использовать js,
+я не могу обернуть элементы в обертку блока, тк родители передач, которые мы выделяем цветом в общем списке, должны быть соседями
+ чекбоксов-->

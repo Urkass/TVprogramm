@@ -1,0 +1,15 @@
+.switch_type_news {
+  display: none;
+}
+.switch_type_news:checked + .switch__label {
+  background: $color_news;
+}
+.switch_type_news:checked + .switch__label:before, .switch_type_news:checked + .switch__label:after {
+  background: $color-light_news;
+}
+.switch_type_news:checked ~ * .broadcast{
+  color: $grey2;
+}
+.switch_type_news:checked ~ * .broadcast_type_news{
+  color: $color_news !important;
+}

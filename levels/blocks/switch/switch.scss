@@ -1,0 +1,29 @@
+
+
+/* Important switch stuff */
+
+
+.switch {
+  display: none;
+}
+.switch:checked + label {
+  background: rgba(3, 155, 229, 0.5);
+}
+.switch:checked + label:before, .switch:checked + label:after {
+  left: 14px;
+  background: #039be5;
+}
+.switch:disabled + label {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.switch.red {
+  display: none;
+}
+.switch.red:checked + label {
+  background: rgba(244, 67, 54, 0.5);
+}
+.switch.red:checked + label:before, .switch.red:checked + label:after {
+  background: #f44336;
+}

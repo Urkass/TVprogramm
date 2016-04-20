@@ -1,0 +1,15 @@
+.switch_type_movie {
+  display: none;
+}
+.switch_type_movie:checked + .switch__label {
+  background: $color_movie;
+}
+.switch_type_movie:checked + .switch__label:before, .switch_type_movie:checked + .switch__label:after {
+  background: $color-light_movie;
+}
+.switch_type_movie:checked ~ * .broadcast{
+  color: $grey2;
+}
+.switch_type_movie:checked ~ * .broadcast_type_movie{
+  color: $color_movie !important;
+}

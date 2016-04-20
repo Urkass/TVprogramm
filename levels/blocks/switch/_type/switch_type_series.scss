@@ -1,0 +1,15 @@
+.switch_type_series {
+  display: none;
+}
+.switch_type_series:checked + .switch__label {
+  background: $color_series;
+}
+.switch_type_series:checked + .switch__label:before, .switch_type_series:checked + .switch__label:after {
+  background: $color-light_series;
+}
+.switch_type_series:checked ~ * .broadcast{
+  color: $grey2;
+}
+.switch_type_series:checked ~ * .broadcast_type_series{
+  color: $color_series !important;
+}

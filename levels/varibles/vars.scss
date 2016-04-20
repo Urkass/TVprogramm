@@ -28,23 +28,31 @@ $orange1: #f7931e;
 $orange2: #fcb040;
 $orange3: #f15b2a;
 
-$green1: #39b449;
-$green2: #009344;
+$green1: #009344;
+$green2: #39b449;
 $green3: #8cc63f;
 
-$blue1: #00b9f2;
-$blue2: #00aeef;
+$blue1: #00aeef;
+$blue2: #00b9f2;
 $blue3: #1b75bc;
 
+$purple1: #8A2BE2;
+
 $grey1: #f0f0f0;
+$grey2: #bfbfbf;
 
 $BI_color_background: #f0f0f0;
 
 $color_series: $red1;
+$color-light_series: mix($red1, white, 70%);
 $color_movie: $orange1;
+$color-light_movie: mix($orange1, white, 70%);
 $color_sport: $green1;
+$color-light_sport: mix($green1, white, 70%);
 $color_news: $blue1;
-$color_talk-show: pink;
+$color-light_news: mix($blue1, white, 70%);
+$color_talk-show: $purple1;
+$color-light_talk-show: mix($purple1, white, 70%);
 
 //menu
 $menu-height: 42px;
