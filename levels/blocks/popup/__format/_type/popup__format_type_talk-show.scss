@@ -1,0 +1,7 @@
+.popup__format_type_talk-show
+{
+  background-color: $color_talk-show;
+  &:after{
+    content: 'Ток-шоу';
+  }
+}

@@ -1,0 +1,10 @@
+.broadcast
+{
+  &:hover + .broadcast__popup{
+    display: block;
+  }
+  &:hover{
+    color: red;
+    cursor: pointer;
+  }
+}

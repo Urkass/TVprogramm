@@ -1,0 +1,7 @@
+.popup__format_type_news
+{
+  background-color: $color_news;
+  &:after{
+    content: 'Новости';
+  }
+}

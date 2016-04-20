@@ -1,0 +1,7 @@
+.popup__format_type_movie
+{
+  background-color: $color_movie;
+  &:after{
+    content: 'Фильм';
+  }
+}

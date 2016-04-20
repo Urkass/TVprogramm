@@ -1,0 +1,7 @@
+.popup__format_type_series
+{
+  background-color: $color_series;
+  &:after{
+    content: 'Сериал';
+  }
+}

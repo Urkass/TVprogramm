@@ -1,0 +1,7 @@
+.popup__format_type_sport
+{
+  background-color: $color_sport;
+  &:after{
+    content: 'Спорт';
+  }
+}
