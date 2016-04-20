@@ -1,11 +1,17 @@
 .header
 {
   background: $white;
-  height: 80px;
+  height: 170px;
   width: 100%;
-  position: fixed;
-  z-index: 101;
+  position: absolute;
+  z-index: -1;
   top: 0;
+  @include middle{
+    height: 130px;
+  }
+  @include small{
+    height: 80px;
+  }
 }
 #switch1:checked ~ * .broadcast{
   color: gainsboro;

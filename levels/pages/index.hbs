@@ -11,169 +11,336 @@
 </head>
 <body>
     {{> header}}
-    <div class="container">
-        <div class="channel">
-            <div class="channel__content">
-                <div class="channel__image channel__image_content_1"></div>
-                <span class="channel__title">Звезда</span>
-                <ul class="channel__list">
-                    {{> broadcast time='03:55' type='movie' name='Чемпион мира'}}
-                    {{> broadcast time='06:00' type='talk-show' name='"Звезда на "Звезде" с Александром Стриженовым'}}
-                    {{> broadcast time='06:45' type='series' name='Служу России!'}}
-                    {{> broadcast time='07:25' type='movie' name='Александр Маленький'}}
-                    {{> broadcast time='09:00' type='news' name='Новости дня'}}
-                    {{> broadcast time='09:15' type='movie' name='Александр Маленький'}}
-                    {{> broadcast time='09:50' type='series' name='Смерть шпионам! 1-я и 2-я серии'}}
-                    {{> broadcast time='10:00' type='news' name='Военные новости'}}
-                    {{> broadcast time='10:05' type='series' name='Смерть шпионам! 1-я и 2-я серии'}}
-                    {{> broadcast time='12:00' type='movie' name='Процесс'}}
-                    {{> broadcast time='13:00' type='news' name='Новости дня'}}
-                    {{> broadcast time='13:15' type='news' name='Специальный репортаж'}}
-                    {{> broadcast time='13:40' type='movie' name='Оружие Победы'}}
-                    {{> broadcast time='14:00' type='news' name='Военные новости'}}
-                    {{> broadcast time='14:05' type='series' name='Тульский-Токарев. 5-я - 8-я серии'}}
-                    {{> broadcast time='18:00' type='news' name='Новости дня'}}
-                    {{> broadcast time='18:30' type='movie' name='Истребители Второй мировой войны. Фильм 2-й'}}
-                    {{> broadcast time='19:20' type='movie' name='"Легенды армии" с Александром Маршалом. Виталий Попков'}}
-                    {{> broadcast time='20:05' type='series' name='Смерть шпионам! 3-я и 4-я серии'}}
-                    {{> broadcast time='22:10' type='news' name='Новости дня'}}
-                    {{> broadcast time='22:30' type='talk-show' name='"Звезда на "Звезде" с Александром Стриженовым'}}
-                    {{> broadcast time='23:15' type='movie' name='Меченый атом'}}
-                    {{> broadcast time='01:15' type='movie' name='Это начиналось так...'}}
-                    {{> broadcast time='03:10' type='movie' name='Запасной аэродром'}}
-                </ul>
+    <div class="slider">
+        <div class="slider__item slider__item_day_monday">
+            <div class="container">
+                <div class="channel">
+                    <div class="channel__content">
+                        <div class="channel__image channel__image_content_1"></div>
+                        <span class="channel__title">Звезда</span>
+                        <ul class="channel__list">
+                            {{> broadcast time='03:55' type='movie' name='Чемпион мира'}}
+                            {{> broadcast time='06:00' type='talk-show' name='"Звезда на "Звезде" с Александром Стриженовым'}}
+                            {{> broadcast time='06:45' type='series' name='Служу России!'}}
+                            {{> broadcast time='07:25' type='movie' name='Александр Маленький'}}
+                            {{> broadcast time='09:00' type='news' name='Новости дня'}}
+                            {{> broadcast time='09:15' type='movie' name='Александр Маленький'}}
+                            {{> broadcast time='09:50' type='series' name='Смерть шпионам! 1-я и 2-я серии'}}
+                            {{> broadcast time='10:00' type='news' name='Военные новости'}}
+                            {{> broadcast time='10:05' type='series' name='Смерть шпионам! 1-я и 2-я серии'}}
+                            {{> broadcast time='12:00' type='movie' name='Процесс'}}
+                            {{> broadcast time='13:00' type='news' name='Новости дня'}}
+                            {{> broadcast time='13:15' type='news' name='Специальный репортаж'}}
+                            {{> broadcast time='13:40' type='movie' name='Оружие Победы'}}
+                            {{> broadcast time='14:00' type='news' name='Военные новости'}}
+                            {{> broadcast time='14:05' type='series' name='Тульский-Токарев. 5-я - 8-я серии'}}
+                            {{> broadcast time='18:00' type='news' name='Новости дня'}}
+                            {{> broadcast time='18:30' type='movie' name='Истребители Второй мировой войны. Фильм 2-й'}}
+                            {{> broadcast time='19:20' type='movie' name='"Легенды армии" с Александром Маршалом. Виталий Попков'}}
+                            {{> broadcast time='20:05' type='series' name='Смерть шпионам! 3-я и 4-я серии'}}
+                            {{> broadcast time='22:10' type='news' name='Новости дня'}}
+                            {{> broadcast time='22:30' type='talk-show' name='"Звезда на "Звезде" с Александром Стриженовым'}}
+                            {{> broadcast time='23:15' type='movie' name='Меченый атом'}}
+                            {{> broadcast time='01:15' type='movie' name='Это начиналось так...'}}
+                            {{> broadcast time='03:10' type='movie' name='Запасной аэродром'}}
+                        </ul>
+                    </div>
+                </div>
+                <div class="channel">
+                    <div class="channel__content">
+                        <div class="channel__image channel__image_content_2"></div>
+                        <span class="channel__title">Первый</span>
+                        <ul class="channel__list">
+                            {{> broadcast time='03:55' type='movie' name='Чемпион мира'}}
+                            {{> broadcast time='06:00' type='talk-show' name='"Звезда на "Звезде" с Александром Стриженовым'}}
+                            {{> broadcast time='06:45' type='series' name='Служу России!'}}
+                            {{> broadcast time='07:25' type='movie' name='Александр Маленький'}}
+                            {{> broadcast time='09:00' type='news' name='Новости дня'}}
+                            {{> broadcast time='09:15' type='movie' name='Александр Маленький'}}
+                            {{> broadcast time='09:50' type='series' name='Смерть шпионам! 1-я и 2-я серии'}}
+                            {{> broadcast time='10:00' type='news' name='Военные новости'}}
+                            {{> broadcast time='10:05' type='series' name='Смерть шпионам! 1-я и 2-я серии'}}
+                            {{> broadcast time='12:00' type='movie' name='Процесс'}}
+                            {{> broadcast time='13:00' type='news' name='Новости дня'}}
+                            {{> broadcast time='13:15' type='news' name='Специальный репортаж'}}
+                            {{> broadcast time='13:40' type='movie' name='Оружие Победы'}}
+                            {{> broadcast time='14:00' type='news' name='Военные новости'}}
+                            {{> broadcast time='14:05' type='series' name='Тульский-Токарев. 5-я - 8-я серии'}}
+                            {{> broadcast time='18:00' type='news' name='Новости дня'}}
+                            {{> broadcast time='18:30' type='movie' name='Истребители Второй мировой войны. Фильм 2-й'}}
+                            {{> broadcast time='19:20' type='movie' name='"Легенды армии" с Александром Маршалом. Виталий Попков'}}
+                            {{> broadcast time='20:05' type='series' name='Смерть шпионам! 3-я и 4-я серии'}}
+                            {{> broadcast time='22:10' type='news' name='Новости дня'}}
+                            {{> broadcast time='22:30' type='talk-show' name='"Звезда на "Звезде" с Александром Стриженовым'}}
+                            {{> broadcast time='23:15' type='movie' name='Меченый атом'}}
+                            {{> broadcast time='01:15' type='movie' name='Это начиналось так...'}}
+                            {{> broadcast time='03:10' type='movie' name='Запасной аэродром'}}
+                        </ul>
+                    </div>
+                </div>
+                <div class="channel">
+                    <div class="channel__content">
+                        <div class="channel__image channel__image_content_3"></div>
+                        <span class="channel__title">Россия</span>
+                        <ul class="channel__list">
+                            {{> broadcast time='03:55' type='movie' name='Чемпион мира'}}
+                            {{> broadcast time='06:00' type='talk-show' name='"Звезда на "Звезде" с Александром Стриженовым'}}
+                            {{> broadcast time='06:45' type='series' name='Служу России!'}}
+                            {{> broadcast time='07:25' type='movie' name='Александр Маленький'}}
+                            {{> broadcast time='09:00' type='news' name='Новости дня'}}
+                            {{> broadcast time='09:15' type='movie' name='Александр Маленький'}}
+                            {{> broadcast time='09:50' type='series' name='Смерть шпионам! 1-я и 2-я серии'}}
+                            {{> broadcast time='10:00' type='news' name='Военные новости'}}
+                            {{> broadcast time='10:05' type='series' name='Смерть шпионам! 1-я и 2-я серии'}}
+                            {{> broadcast time='12:00' type='movie' name='Процесс'}}
+                            {{> broadcast time='13:00' type='news' name='Новости дня'}}
+                            {{> broadcast time='13:15' type='news' name='Специальный репортаж'}}
+                            {{> broadcast time='13:40' type='movie' name='Оружие Победы'}}
+                            {{> broadcast time='14:00' type='news' name='Военные новости'}}
+                            {{> broadcast time='14:05' type='series' name='Тульский-Токарев. 5-я - 8-я серии'}}
+                            {{> broadcast time='18:00' type='news' name='Новости дня'}}
+                            {{> broadcast time='18:30' type='movie' name='Истребители Второй мировой войны. Фильм 2-й'}}
+                            {{> broadcast time='19:20' type='movie' name='"Легенды армии" с Александром Маршалом. Виталий Попков'}}
+                            {{> broadcast time='20:05' type='series' name='Смерть шпионам! 3-я и 4-я серии'}}
+                            {{> broadcast time='22:10' type='news' name='Новости дня'}}
+                            {{> broadcast time='22:30' type='talk-show' name='"Звезда на "Звезде" с Александром Стриженовым'}}
+                            {{> broadcast time='23:15' type='movie' name='Меченый атом'}}
+                            {{> broadcast time='01:15' type='movie' name='Это начиналось так...'}}
+                            {{> broadcast time='03:10' type='movie' name='Запасной аэродром'}}
+                        </ul>
+                    </div>
+                </div>
+                <div class="channel">
+                    <div class="channel__content">
+                        <div class="channel__image channel__image_content_4"></div>
+                        <span class="channel__title">Матч ТВ</span>
+                        <ul class="channel__list">
+                            {{> broadcast time='03:55' type='movie' name='Чемпион мира'}}
+                            {{> broadcast time='06:00' type='talk-show' name='"Звезда на "Звезде" с Александром Стриженовым'}}
+                            {{> broadcast time='06:45' type='series' name='Служу России!'}}
+                            {{> broadcast time='07:25' type='movie' name='Александр Маленький'}}
+                            {{> broadcast time='09:00' type='news' name='Новости дня'}}
+                            {{> broadcast time='09:15' type='movie' name='Александр Маленький'}}
+                            {{> broadcast time='09:50' type='series' name='Смерть шпионам! 1-я и 2-я серии'}}
+                            {{> broadcast time='10:00' type='news' name='Военные новости'}}
+                            {{> broadcast time='10:05' type='series' name='Смерть шпионам! 1-я и 2-я серии'}}
+                            {{> broadcast time='12:00' type='movie' name='Процесс'}}
+                            {{> broadcast time='13:00' type='news' name='Новости дня'}}
+                            {{> broadcast time='13:15' type='news' name='Специальный репортаж'}}
+                            {{> broadcast time='13:40' type='movie' name='Оружие Победы'}}
+                            {{> broadcast time='14:00' type='news' name='Военные новости'}}
+                            {{> broadcast time='14:05' type='series' name='Тульский-Токарев. 5-я - 8-я серии'}}
+                            {{> broadcast time='18:00' type='news' name='Новости дня'}}
+                            {{> broadcast time='18:30' type='movie' name='Истребители Второй мировой войны. Фильм 2-й'}}
+                            {{> broadcast time='19:20' type='movie' name='"Легенды армии" с Александром Маршалом. Виталий Попков'}}
+                            {{> broadcast time='20:05' type='series' name='Смерть шпионам! 3-я и 4-я серии'}}
+                            {{> broadcast time='22:10' type='news' name='Новости дня'}}
+                            {{> broadcast time='22:30' type='talk-show' name='"Звезда на "Звезде" с Александром Стриженовым'}}
+                            {{> broadcast time='23:15' type='movie' name='Меченый атом'}}
+                            {{> broadcast time='01:15' type='movie' name='Это начиналось так...'}}
+                            {{> broadcast time='03:10' type='movie' name='Запасной аэродром'}}
+                        </ul>
+                    </div>
+                </div>
+                <div class="channel">
+                    <div class="channel__content">
+                        <div class="channel__image channel__image_content_5"></div>
+                        <span class="channel__title">Рен ТВ</span>
+                        <ul class="channel__list">
+                            {{> broadcast time='03:55' type='movie' name='Чемпион мира'}}
+                            {{> broadcast time='06:00' type='talk-show' name='"Звезда на "Звезде" с Александром Стриженовым'}}
+                            {{> broadcast time='06:45' type='series' name='Служу России!'}}
+                            {{> broadcast time='07:25' type='movie' name='Александр Маленький'}}
+                            {{> broadcast time='09:00' type='news' name='Новости дня'}}
+                            {{> broadcast time='09:15' type='movie' name='Александр Маленький'}}
+                            {{> broadcast time='09:50' type='series' name='Смерть шпионам! 1-я и 2-я серии'}}
+                            {{> broadcast time='10:00' type='news' name='Военные новости'}}
+                            {{> broadcast time='10:05' type='series' name='Смерть шпионам! 1-я и 2-я серии'}}
+                            {{> broadcast time='12:00' type='movie' name='Процесс'}}
+                            {{> broadcast time='13:00' type='news' name='Новости дня'}}
+                            {{> broadcast time='13:15' type='news' name='Специальный репортаж'}}
+                            {{> broadcast time='13:40' type='movie' name='Оружие Победы'}}
+                            {{> broadcast time='14:00' type='news' name='Военные новости'}}
+                            {{> broadcast time='14:05' type='series' name='Тульский-Токарев. 5-я - 8-я серии'}}
+                            {{> broadcast time='18:00' type='news' name='Новости дня'}}
+                            {{> broadcast time='18:30' type='movie' name='Истребители Второй мировой войны. Фильм 2-й'}}
+                            {{> broadcast time='19:20' type='movie' name='"Легенды армии" с Александром Маршалом. Виталий Попков'}}
+                            {{> broadcast time='20:05' type='series' name='Смерть шпионам! 3-я и 4-я серии'}}
+                            {{> broadcast time='22:10' type='news' name='Новости дня'}}
+                            {{> broadcast time='22:30' type='talk-show' name='"Звезда на "Звезде" с Александром Стриженовым'}}
+                            {{> broadcast time='23:15' type='movie' name='Меченый атом'}}
+                            {{> broadcast time='01:15' type='movie' name='Это начиналось так...'}}
+                            {{> broadcast time='03:10' type='movie' name='Запасной аэродром'}}
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="channel">
-            <div class="channel__content">
-                <div class="channel__image channel__image_content_2"></div>
-                <span class="channel__title">Первый</span>
-                <ul class="channel__list">
-                    {{> broadcast time='03:55' type='movie' name='Чемпион мира'}}
-                    {{> broadcast time='06:00' type='talk-show' name='"Звезда на "Звезде" с Александром Стриженовым'}}
-                    {{> broadcast time='06:45' type='series' name='Служу России!'}}
-                    {{> broadcast time='07:25' type='movie' name='Александр Маленький'}}
-                    {{> broadcast time='09:00' type='news' name='Новости дня'}}
-                    {{> broadcast time='09:15' type='movie' name='Александр Маленький'}}
-                    {{> broadcast time='09:50' type='series' name='Смерть шпионам! 1-я и 2-я серии'}}
-                    {{> broadcast time='10:00' type='news' name='Военные новости'}}
-                    {{> broadcast time='10:05' type='series' name='Смерть шпионам! 1-я и 2-я серии'}}
-                    {{> broadcast time='12:00' type='movie' name='Процесс'}}
-                    {{> broadcast time='13:00' type='news' name='Новости дня'}}
-                    {{> broadcast time='13:15' type='news' name='Специальный репортаж'}}
-                    {{> broadcast time='13:40' type='movie' name='Оружие Победы'}}
-                    {{> broadcast time='14:00' type='news' name='Военные новости'}}
-                    {{> broadcast time='14:05' type='series' name='Тульский-Токарев. 5-я - 8-я серии'}}
-                    {{> broadcast time='18:00' type='news' name='Новости дня'}}
-                    {{> broadcast time='18:30' type='movie' name='Истребители Второй мировой войны. Фильм 2-й'}}
-                    {{> broadcast time='19:20' type='movie' name='"Легенды армии" с Александром Маршалом. Виталий Попков'}}
-                    {{> broadcast time='20:05' type='series' name='Смерть шпионам! 3-я и 4-я серии'}}
-                    {{> broadcast time='22:10' type='news' name='Новости дня'}}
-                    {{> broadcast time='22:30' type='talk-show' name='"Звезда на "Звезде" с Александром Стриженовым'}}
-                    {{> broadcast time='23:15' type='movie' name='Меченый атом'}}
-                    {{> broadcast time='01:15' type='movie' name='Это начиналось так...'}}
-                    {{> broadcast time='03:10' type='movie' name='Запасной аэродром'}}
-                </ul>
-            </div>
-        </div>
-        <div class="channel">
-            <div class="channel__content">
-                <div class="channel__image channel__image_content_3"></div>
-                <span class="channel__title">Россия</span>
-                <ul class="channel__list">
-                    {{> broadcast time='03:55' type='movie' name='Чемпион мира'}}
-                    {{> broadcast time='06:00' type='talk-show' name='"Звезда на "Звезде" с Александром Стриженовым'}}
-                    {{> broadcast time='06:45' type='series' name='Служу России!'}}
-                    {{> broadcast time='07:25' type='movie' name='Александр Маленький'}}
-                    {{> broadcast time='09:00' type='news' name='Новости дня'}}
-                    {{> broadcast time='09:15' type='movie' name='Александр Маленький'}}
-                    {{> broadcast time='09:50' type='series' name='Смерть шпионам! 1-я и 2-я серии'}}
-                    {{> broadcast time='10:00' type='news' name='Военные новости'}}
-                    {{> broadcast time='10:05' type='series' name='Смерть шпионам! 1-я и 2-я серии'}}
-                    {{> broadcast time='12:00' type='movie' name='Процесс'}}
-                    {{> broadcast time='13:00' type='news' name='Новости дня'}}
-                    {{> broadcast time='13:15' type='news' name='Специальный репортаж'}}
-                    {{> broadcast time='13:40' type='movie' name='Оружие Победы'}}
-                    {{> broadcast time='14:00' type='news' name='Военные новости'}}
-                    {{> broadcast time='14:05' type='series' name='Тульский-Токарев. 5-я - 8-я серии'}}
-                    {{> broadcast time='18:00' type='news' name='Новости дня'}}
-                    {{> broadcast time='18:30' type='movie' name='Истребители Второй мировой войны. Фильм 2-й'}}
-                    {{> broadcast time='19:20' type='movie' name='"Легенды армии" с Александром Маршалом. Виталий Попков'}}
-                    {{> broadcast time='20:05' type='series' name='Смерть шпионам! 3-я и 4-я серии'}}
-                    {{> broadcast time='22:10' type='news' name='Новости дня'}}
-                    {{> broadcast time='22:30' type='talk-show' name='"Звезда на "Звезде" с Александром Стриженовым'}}
-                    {{> broadcast time='23:15' type='movie' name='Меченый атом'}}
-                    {{> broadcast time='01:15' type='movie' name='Это начиналось так...'}}
-                    {{> broadcast time='03:10' type='movie' name='Запасной аэродром'}}
-                </ul>
-            </div>
-        </div>
-        <div class="channel">
-            <div class="channel__content">
-                <div class="channel__image channel__image_content_4"></div>
-                <span class="channel__title">Матч ТВ</span>
-                <ul class="channel__list">
-                    {{> broadcast time='03:55' type='movie' name='Чемпион мира'}}
-                    {{> broadcast time='06:00' type='talk-show' name='"Звезда на "Звезде" с Александром Стриженовым'}}
-                    {{> broadcast time='06:45' type='series' name='Служу России!'}}
-                    {{> broadcast time='07:25' type='movie' name='Александр Маленький'}}
-                    {{> broadcast time='09:00' type='news' name='Новости дня'}}
-                    {{> broadcast time='09:15' type='movie' name='Александр Маленький'}}
-                    {{> broadcast time='09:50' type='series' name='Смерть шпионам! 1-я и 2-я серии'}}
-                    {{> broadcast time='10:00' type='news' name='Военные новости'}}
-                    {{> broadcast time='10:05' type='series' name='Смерть шпионам! 1-я и 2-я серии'}}
-                    {{> broadcast time='12:00' type='movie' name='Процесс'}}
-                    {{> broadcast time='13:00' type='news' name='Новости дня'}}
-                    {{> broadcast time='13:15' type='news' name='Специальный репортаж'}}
-                    {{> broadcast time='13:40' type='movie' name='Оружие Победы'}}
-                    {{> broadcast time='14:00' type='news' name='Военные новости'}}
-                    {{> broadcast time='14:05' type='series' name='Тульский-Токарев. 5-я - 8-я серии'}}
-                    {{> broadcast time='18:00' type='news' name='Новости дня'}}
-                    {{> broadcast time='18:30' type='movie' name='Истребители Второй мировой войны. Фильм 2-й'}}
-                    {{> broadcast time='19:20' type='movie' name='"Легенды армии" с Александром Маршалом. Виталий Попков'}}
-                    {{> broadcast time='20:05' type='series' name='Смерть шпионам! 3-я и 4-я серии'}}
-                    {{> broadcast time='22:10' type='news' name='Новости дня'}}
-                    {{> broadcast time='22:30' type='talk-show' name='"Звезда на "Звезде" с Александром Стриженовым'}}
-                    {{> broadcast time='23:15' type='movie' name='Меченый атом'}}
-                    {{> broadcast time='01:15' type='movie' name='Это начиналось так...'}}
-                    {{> broadcast time='03:10' type='movie' name='Запасной аэродром'}}
-                </ul>
-            </div>
-        </div>
-        <div class="channel">
-            <div class="channel__content">
-                <div class="channel__image channel__image_content_5"></div>
-                <span class="channel__title">Рен ТВ</span>
-                <ul class="channel__list">
-                    {{> broadcast time='03:55' type='movie' name='Чемпион мира'}}
-                    {{> broadcast time='06:00' type='talk-show' name='"Звезда на "Звезде" с Александром Стриженовым'}}
-                    {{> broadcast time='06:45' type='series' name='Служу России!'}}
-                    {{> broadcast time='07:25' type='movie' name='Александр Маленький'}}
-                    {{> broadcast time='09:00' type='news' name='Новости дня'}}
-                    {{> broadcast time='09:15' type='movie' name='Александр Маленький'}}
-                    {{> broadcast time='09:50' type='series' name='Смерть шпионам! 1-я и 2-я серии'}}
-                    {{> broadcast time='10:00' type='news' name='Военные новости'}}
-                    {{> broadcast time='10:05' type='series' name='Смерть шпионам! 1-я и 2-я серии'}}
-                    {{> broadcast time='12:00' type='movie' name='Процесс'}}
-                    {{> broadcast time='13:00' type='news' name='Новости дня'}}
-                    {{> broadcast time='13:15' type='news' name='Специальный репортаж'}}
-                    {{> broadcast time='13:40' type='movie' name='Оружие Победы'}}
-                    {{> broadcast time='14:00' type='news' name='Военные новости'}}
-                    {{> broadcast time='14:05' type='series' name='Тульский-Токарев. 5-я - 8-я серии'}}
-                    {{> broadcast time='18:00' type='news' name='Новости дня'}}
-                    {{> broadcast time='18:30' type='movie' name='Истребители Второй мировой войны. Фильм 2-й'}}
-                    {{> broadcast time='19:20' type='movie' name='"Легенды армии" с Александром Маршалом. Виталий Попков'}}
-                    {{> broadcast time='20:05' type='series' name='Смерть шпионам! 3-я и 4-я серии'}}
-                    {{> broadcast time='22:10' type='news' name='Новости дня'}}
-                    {{> broadcast time='22:30' type='talk-show' name='"Звезда на "Звезде" с Александром Стриженовым'}}
-                    {{> broadcast time='23:15' type='movie' name='Меченый атом'}}
-                    {{> broadcast time='01:15' type='movie' name='Это начиналось так...'}}
-                    {{> broadcast time='03:10' type='movie' name='Запасной аэродром'}}
-                </ul>
+        <div class="slider__item slider__item_day_tuesday">
+            <div class="container">
+                <div class="channel">
+                    <div class="channel__content">
+                        <div class="channel__image channel__image_content_1"></div>
+                        <span class="channel__title">Звезда</span>
+                        <ul class="channel__list">
+                            {{> broadcast time='03:55' type='movie' name='Чемпион мира'}}
+                            {{> broadcast time='06:00' type='talk-show' name='"Звезда на "Звезде" с Александром Стриженовым'}}
+                            {{> broadcast time='06:45' type='series' name='Служу России!'}}
+                            {{> broadcast time='07:25' type='movie' name='Александр Маленький'}}
+                            {{> broadcast time='09:00' type='news' name='Новости дня'}}
+                            {{> broadcast time='09:15' type='movie' name='Александр Маленький'}}
+                            {{> broadcast time='09:50' type='series' name='Смерть шпионам! 1-я и 2-я серии'}}
+                            {{> broadcast time='10:00' type='news' name='Военные новости'}}
+                            {{> broadcast time='10:05' type='series' name='Смерть шпионам! 1-я и 2-я серии'}}
+                            {{> broadcast time='12:00' type='movie' name='Процесс'}}
+                            {{> broadcast time='13:00' type='news' name='Новости дня'}}
+                            {{> broadcast time='13:15' type='news' name='Специальный репортаж'}}
+                            {{> broadcast time='13:40' type='movie' name='Оружие Победы'}}
+                            {{> broadcast time='14:00' type='news' name='Военные новости'}}
+                            {{> broadcast time='14:05' type='series' name='Тульский-Токарев. 5-я - 8-я серии'}}
+                            {{> broadcast time='18:00' type='news' name='Новости дня'}}
+                            {{> broadcast time='18:30' type='movie' name='Истребители Второй мировой войны. Фильм 2-й'}}
+                            {{> broadcast time='19:20' type='movie' name='"Легенды армии" с Александром Маршалом. Виталий Попков'}}
+                            {{> broadcast time='20:05' type='series' name='Смерть шпионам! 3-я и 4-я серии'}}
+                            {{> broadcast time='22:10' type='news' name='Новости дня'}}
+                            {{> broadcast time='22:30' type='talk-show' name='"Звезда на "Звезде" с Александром Стриженовым'}}
+                            {{> broadcast time='23:15' type='movie' name='Меченый атом'}}
+                            {{> broadcast time='01:15' type='movie' name='Это начиналось так...'}}
+                            {{> broadcast time='03:10' type='movie' name='Запасной аэродром'}}
+                        </ul>
+                    </div>
+                </div>
+                <div class="channel">
+                    <div class="channel__content">
+                        <div class="channel__image channel__image_content_2"></div>
+                        <span class="channel__title">Первый</span>
+                        <ul class="channel__list">
+                            {{> broadcast time='03:55' type='movie' name='Чемпион мира'}}
+                            {{> broadcast time='06:00' type='talk-show' name='"Звезда на "Звезде" с Александром Стриженовым'}}
+                            {{> broadcast time='06:45' type='series' name='Служу России!'}}
+                            {{> broadcast time='07:25' type='movie' name='Александр Маленький'}}
+                            {{> broadcast time='09:00' type='news' name='Новости дня'}}
+                            {{> broadcast time='09:15' type='movie' name='Александр Маленький'}}
+                            {{> broadcast time='09:50' type='series' name='Смерть шпионам! 1-я и 2-я серии'}}
+                            {{> broadcast time='10:00' type='news' name='Военные новости'}}
+                            {{> broadcast time='10:05' type='series' name='Смерть шпионам! 1-я и 2-я серии'}}
+                            {{> broadcast time='12:00' type='movie' name='Процесс'}}
+                            {{> broadcast time='13:00' type='news' name='Новости дня'}}
+                            {{> broadcast time='13:15' type='news' name='Специальный репортаж'}}
+                            {{> broadcast time='13:40' type='movie' name='Оружие Победы'}}
+                            {{> broadcast time='14:00' type='news' name='Военные новости'}}
+                            {{> broadcast time='14:05' type='series' name='Тульский-Токарев. 5-я - 8-я серии'}}
+                            {{> broadcast time='18:00' type='news' name='Новости дня'}}
+                            {{> broadcast time='18:30' type='movie' name='Истребители Второй мировой войны. Фильм 2-й'}}
+                            {{> broadcast time='19:20' type='movie' name='"Легенды армии" с Александром Маршалом. Виталий Попков'}}
+                            {{> broadcast time='20:05' type='series' name='Смерть шпионам! 3-я и 4-я серии'}}
+                            {{> broadcast time='22:10' type='news' name='Новости дня'}}
+                            {{> broadcast time='22:30' type='talk-show' name='"Звезда на "Звезде" с Александром Стриженовым'}}
+                            {{> broadcast time='23:15' type='movie' name='Меченый атом'}}
+                            {{> broadcast time='01:15' type='movie' name='Это начиналось так...'}}
+                            {{> broadcast time='03:10' type='movie' name='Запасной аэродром'}}
+                        </ul>
+                    </div>
+                </div>
+                <div class="channel">
+                    <div class="channel__content">
+                        <div class="channel__image channel__image_content_3"></div>
+                        <span class="channel__title">Россия</span>
+                        <ul class="channel__list">
+                            {{> broadcast time='03:55' type='movie' name='Чемпион мира'}}
+                            {{> broadcast time='06:00' type='talk-show' name='"Звезда на "Звезде" с Александром Стриженовым'}}
+                            {{> broadcast time='06:45' type='series' name='Служу России!'}}
+                            {{> broadcast time='07:25' type='movie' name='Александр Маленький'}}
+                            {{> broadcast time='09:00' type='news' name='Новости дня'}}
+                            {{> broadcast time='09:15' type='movie' name='Александр Маленький'}}
+                            {{> broadcast time='09:50' type='series' name='Смерть шпионам! 1-я и 2-я серии'}}
+                            {{> broadcast time='10:00' type='news' name='Военные новости'}}
+                            {{> broadcast time='10:05' type='series' name='Смерть шпионам! 1-я и 2-я серии'}}
+                            {{> broadcast time='12:00' type='movie' name='Процесс'}}
+                            {{> broadcast time='13:00' type='news' name='Новости дня'}}
+                            {{> broadcast time='13:15' type='news' name='Специальный репортаж'}}
+                            {{> broadcast time='13:40' type='movie' name='Оружие Победы'}}
+                            {{> broadcast time='14:00' type='news' name='Военные новости'}}
+                            {{> broadcast time='14:05' type='series' name='Тульский-Токарев. 5-я - 8-я серии'}}
+                            {{> broadcast time='18:00' type='news' name='Новости дня'}}
+                            {{> broadcast time='18:30' type='movie' name='Истребители Второй мировой войны. Фильм 2-й'}}
+                            {{> broadcast time='19:20' type='movie' name='"Легенды армии" с Александром Маршалом. Виталий Попков'}}
+                            {{> broadcast time='20:05' type='series' name='Смерть шпионам! 3-я и 4-я серии'}}
+                            {{> broadcast time='22:10' type='news' name='Новости дня'}}
+                            {{> broadcast time='22:30' type='talk-show' name='"Звезда на "Звезде" с Александром Стриженовым'}}
+                            {{> broadcast time='23:15' type='movie' name='Меченый атом'}}
+                            {{> broadcast time='01:15' type='movie' name='Это начиналось так...'}}
+                            {{> broadcast time='03:10' type='movie' name='Запасной аэродром'}}
+                        </ul>
+                    </div>
+                </div>
+                <div class="channel">
+                    <div class="channel__content">
+                        <div class="channel__image channel__image_content_4"></div>
+                        <span class="channel__title">Матч ТВ</span>
+                        <ul class="channel__list">
+                            {{> broadcast time='03:55' type='movie' name='Чемпион мира'}}
+                            {{> broadcast time='06:00' type='talk-show' name='"Звезда на "Звезде" с Александром Стриженовым'}}
+                            {{> broadcast time='06:45' type='series' name='Служу России!'}}
+                            {{> broadcast time='07:25' type='movie' name='Александр Маленький'}}
+                            {{> broadcast time='09:00' type='news' name='Новости дня'}}
+                            {{> broadcast time='09:15' type='movie' name='Александр Маленький'}}
+                            {{> broadcast time='09:50' type='series' name='Смерть шпионам! 1-я и 2-я серии'}}
+                            {{> broadcast time='10:00' type='news' name='Военные новости'}}
+                            {{> broadcast time='10:05' type='series' name='Смерть шпионам! 1-я и 2-я серии'}}
+                            {{> broadcast time='12:00' type='movie' name='Процесс'}}
+                            {{> broadcast time='13:00' type='news' name='Новости дня'}}
+                            {{> broadcast time='13:15' type='news' name='Специальный репортаж'}}
+                            {{> broadcast time='13:40' type='movie' name='Оружие Победы'}}
+                            {{> broadcast time='14:00' type='news' name='Военные новости'}}
+                            {{> broadcast time='14:05' type='series' name='Тульский-Токарев. 5-я - 8-я серии'}}
+                            {{> broadcast time='18:00' type='news' name='Новости дня'}}
+                            {{> broadcast time='18:30' type='movie' name='Истребители Второй мировой войны. Фильм 2-й'}}
+                            {{> broadcast time='19:20' type='movie' name='"Легенды армии" с Александром Маршалом. Виталий Попков'}}
+                            {{> broadcast time='20:05' type='series' name='Смерть шпионам! 3-я и 4-я серии'}}
+                            {{> broadcast time='22:10' type='news' name='Новости дня'}}
+                            {{> broadcast time='22:30' type='talk-show' name='"Звезда на "Звезде" с Александром Стриженовым'}}
+                            {{> broadcast time='23:15' type='movie' name='Меченый атом'}}
+                            {{> broadcast time='01:15' type='movie' name='Это начиналось так...'}}
+                            {{> broadcast time='03:10' type='movie' name='Запасной аэродром'}}
+                        </ul>
+                    </div>
+                </div>
+                <div class="channel">
+                    <div class="channel__content">
+                        <div class="channel__image channel__image_content_5"></div>
+                        <span class="channel__title">Рен ТВ</span>
+                        <ul class="channel__list">
+                            {{> broadcast time='03:55' type='movie' name='Чемпион мира'}}
+                            {{> broadcast time='06:00' type='talk-show' name='"Звезда на "Звезде" с Александром Стриженовым'}}
+                            {{> broadcast time='06:45' type='series' name='Служу России!'}}
+                            {{> broadcast time='07:25' type='movie' name='Александр Маленький'}}
+                            {{> broadcast time='09:00' type='news' name='Новости дня'}}
+                            {{> broadcast time='09:15' type='movie' name='Александр Маленький'}}
+                            {{> broadcast time='09:50' type='series' name='Смерть шпионам! 1-я и 2-я серии'}}
+                            {{> broadcast time='10:00' type='news' name='Военные новости'}}
+                            {{> broadcast time='10:05' type='series' name='Смерть шпионам! 1-я и 2-я серии'}}
+                            {{> broadcast time='12:00' type='movie' name='Процесс'}}
+                            {{> broadcast time='13:00' type='news' name='Новости дня'}}
+                            {{> broadcast time='13:15' type='news' name='Специальный репортаж'}}
+                            {{> broadcast time='13:40' type='movie' name='Оружие Победы'}}
+                            {{> broadcast time='14:00' type='news' name='Военные новости'}}
+                            {{> broadcast time='14:05' type='series' name='Тульский-Токарев. 5-я - 8-я серии'}}
+                            {{> broadcast time='18:00' type='news' name='Новости дня'}}
+                            {{> broadcast time='18:30' type='movie' name='Истребители Второй мировой войны. Фильм 2-й'}}
+                            {{> broadcast time='19:20' type='movie' name='"Легенды армии" с Александром Маршалом. Виталий Попков'}}
+                            {{> broadcast time='20:05' type='series' name='Смерть шпионам! 3-я и 4-я серии'}}
+                            {{> broadcast time='22:10' type='news' name='Новости дня'}}
+                            {{> broadcast time='22:30' type='talk-show' name='"Звезда на "Звезде" с Александром Стриженовым'}}
+                            {{> broadcast time='23:15' type='movie' name='Меченый атом'}}
+                            {{> broadcast time='01:15' type='movie' name='Это начиналось так...'}}
+                            {{> broadcast time='03:10' type='movie' name='Запасной аэродром'}}
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-<script type="text/javascript" src="/handlebars.js"></script>
 <script type="text/javascript" src="/dist/app.js"></script>
 </body>
 </html>

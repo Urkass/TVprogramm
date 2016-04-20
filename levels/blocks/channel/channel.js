@@ -1,4 +1,3 @@
-
 var today;
 var broadcastDate = new Date();
 var content, arr, timeArray;

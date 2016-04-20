@@ -1,0 +1,19 @@
+.week-switch__label
+{
+
+  overflow:hidden;
+  display:inline-block;
+  width:20px;
+  height:20px;
+  background: white;
+  border-radius:50%;
+  transition: all .2s;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+  &:hover{
+    cursor: pointer;
+    background-color: $color-light_week-switcher;
+  }
+}
+.week-switch__button:checked + .week-switch__label{
+  background-color: $color_week-switcher;
+}

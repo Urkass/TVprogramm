@@ -38,6 +38,8 @@ $blue3: #1b75bc;
 
 $purple1: #8A2BE2;
 
+$yellow1: #FAFF33;
+
 $grey1: #f0f0f0;
 $grey2: #bfbfbf;
 
@@ -53,6 +55,9 @@ $color_news: $blue1;
 $color-light_news: mix($blue1, white, 70%);
 $color_talk-show: $purple1;
 $color-light_talk-show: mix($purple1, white, 70%);
+
+$color_week-switcher: $yellow1;
+$color-light_week-switcher: mix($yellow1, white, 70%);
 
 //menu
 $menu-height: 42px;

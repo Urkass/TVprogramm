@@ -5,6 +5,7 @@
 
 .switch {
   display: none;
+  margin-top: 10px;
 }
 .switch:checked + label {
   background: rgba(3, 155, 229, 0.5);
