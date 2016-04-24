@@ -9,6 +9,15 @@ body {
   text-align: center;
 }
 
+.broadcast:hover + .broadcast__popup {
+  display: block;
+}
+
+.broadcast:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .channel {
   display: -webkit-box;
   display: -webkit-flex;
@@ -86,13 +95,10 @@ body {
   color: #f7931e;
 }
 
-.broadcast:hover + .broadcast__popup {
-  display: block;
-}
-
-.broadcast:hover {
-  text-decoration: underline;
-  cursor: pointer;
+.line {
+  height: 5px;
+  width: 100%;
+  background-color: #dfe0db;
 }
 
 .popup {
@@ -106,10 +112,26 @@ body {
   box-shadow: 0 10px 20px -4px rgba(0, 0, 0, 0.4);
 }
 
-.line {
-  height: 5px;
+.section {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   width: 100%;
-  background-color: #dfe0db;
+  padding-left: 12vw;
+  padding-right: 12vw;
+}
+
+@media all and (min-width: 60em) {
+  .section {
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+}
+
+@media all and (min-width: 40em) {
+  .section {
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
 }
 
 /* Important switch stuff */
@@ -147,30 +169,22 @@ body {
   background: #f44336;
 }
 
-.section {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  padding-left: 12vw;
-  padding-right: 12vw;
+.broadcast__time {
+  font-weight: 700;
 }
 
-@media all and (min-width: 60em) {
-  .section {
-    padding-left: 6vw;
-    padding-right: 6vw;
-  }
-}
-
-@media all and (min-width: 40em) {
-  .section {
-    padding-left: 2vw;
-    padding-right: 2vw;
-  }
+.broadcast_now-playing_true {
+  border: 2px solid red;
 }
 
 .channel__broadcast {
   margin-bottom: 5px;
+}
+
+.channel__content {
+  background-color: #fff;
+  padding: 1em;
+  width: 100%;
 }
 
 .channel__image {
@@ -179,12 +193,6 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
-}
-
-.channel__list {
-  list-style: none;
-  padding: 0;
-  font-size: 0.9em;
 }
 
 .channel__title {
@@ -196,22 +204,20 @@ body {
   font-weight: 300;
 }
 
-.broadcast__time {
-  font-weight: 700;
-}
-
-.channel__content {
-  background-color: #fff;
-  padding: 1em;
-  width: 100%;
-}
-
-.broadcast_now-playing_true {
-  border: 2px solid red;
+.channel__list {
+  list-style: none;
+  padding: 0;
+  font-size: 0.9em;
 }
 
 .popup__description {
   margin: 0 5px 5px 5px;
+}
+
+.popup__format {
+  display: inline-block;
+  padding: 5px;
+  margin: 5px;
 }
 
 .popup__image {
@@ -221,17 +227,8 @@ body {
   background-size: contain;
 }
 
-.popup__format {
-  display: inline-block;
-  padding: 5px;
-  margin: 5px;
-}
-
-.switch__name {
-  font-size: 0.9em;
-  display: inline-block;
-  line-height: 34px;
-  vertical-align: top;
+.slider__item {
+  display: none;
 }
 
 .switch__label {
@@ -277,6 +274,13 @@ body {
   -webkit-transform: scale3d(3, 3, 1);
   transform: scale3d(3, 3, 1);
   opacity: 0;
+}
+
+.switch__name {
+  font-size: 0.9em;
+  display: inline-block;
+  line-height: 34px;
+  vertical-align: top;
 }
 
 .switch_type_movie {
@@ -384,25 +388,10 @@ body {
   color: #8A2BE2 !important;
 }
 
-.slider__item {
-  display: none;
-}
-
 .week-switch__button {
   position: absolute;
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.week-switch__name {
-  font-size: 0.9em;
-  vertical-align: top;
-  display: inline-block;
-  line-height: 20px;
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-bottom: 10px;
-  margin-top: 10px;
 }
 
 .week-switch__label {
@@ -430,6 +419,17 @@ body {
   background-color: #FAFF33;
 }
 
+.week-switch__name {
+  font-size: 0.9em;
+  vertical-align: top;
+  display: inline-block;
+  line-height: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
 .channel__image_content_1 {
   background-image: url("images/channel__image_content_1.png");
 }
@@ -448,26 +448,6 @@ body {
 
 .channel__image_content_5 {
   background-image: url("images/channel__image_content_5.png");
-}
-
-.popup__image_type_movie {
-  background-image: url("images/popup__image_type_movie.jpg");
-}
-
-.popup__image_type_news {
-  background-image: url("images/popup__image_type_news.jpg");
-}
-
-.popup__image_type_series {
-  background-image: url("images/popup__image_type_series.jpg");
-}
-
-.popup__image_type_sport {
-  background-image: url("images/popup__image_type_sport.jpg");
-}
-
-.popup__image_type_talk-show {
-  background-image: url("images/popup__image_type_talk-show.jpg");
 }
 
 .popup__format_type_movie {
@@ -510,6 +490,71 @@ body {
   content: 'Ток-шоу';
 }
 
+.popup__image_type_movie {
+  background-image: url("images/popup__image_type_movie.jpg");
+}
+
+.popup__image_type_news {
+  background-image: url("images/popup__image_type_news.jpg");
+}
+
+.popup__image_type_series {
+  background-image: url("images/popup__image_type_series.jpg");
+}
+
+.popup__image_type_sport {
+  background-image: url("images/popup__image_type_sport.jpg");
+}
+
+.popup__image_type_talk-show {
+  background-image: url("images/popup__image_type_talk-show.jpg");
+}
+
+.switch__label_type_movie:hover:before,
+.switch__label_type_movie:hover:after {
+  background: #f9b362;
+}
+
+.switch__label_type_news:hover:before,
+.switch__label_type_news:hover:after {
+  background: #4dc6f4;
+}
+
+.switch__label_type_series:hover:before,
+.switch__label_type_series:hover:after {
+  background: #f47b6e;
+}
+
+.switch__label_type_sport:hover:before,
+.switch__label_type_sport:hover:after {
+  background: #4db37c;
+}
+
+.switch__label_type_talk-show:hover:before,
+.switch__label_type_talk-show:hover:after {
+  background: #ad6beb;
+}
+
+.switch__name_type_movie:after {
+  content: 'Фильмы';
+}
+
+.switch__name_type_news:after {
+  content: 'Новости';
+}
+
+.switch__name_type_series:after {
+  content: 'Сериалы';
+}
+
+.switch__name_type_sport:after {
+  content: 'Спорт';
+}
+
+.switch__name_type_talk-show:after {
+  content: 'Ток-шоу';
+}
+
 .week-switch__button_day_friday:checked ~ * .slider__item_day_friday {
   display: block;
 }
@@ -536,51 +581,6 @@ body {
 
 .week-switch__button_day_wednesday:checked ~ * .slider__item_day_wednesday {
   display: block;
-}
-
-.switch__name_type_movie:after {
-  content: 'Фильмы';
-}
-
-.switch__name_type_news:after {
-  content: 'Новости';
-}
-
-.switch__name_type_series:after {
-  content: 'Сериалы';
-}
-
-.switch__name_type_sport:after {
-  content: 'Спорт';
-}
-
-.switch__name_type_talk-show:after {
-  content: 'Ток-шоу';
-}
-
-.switch__label_type_movie:hover:before,
-.switch__label_type_movie:hover:after {
-  background: #f9b362;
-}
-
-.switch__label_type_news:hover:before,
-.switch__label_type_news:hover:after {
-  background: #4dc6f4;
-}
-
-.switch__label_type_series:hover:before,
-.switch__label_type_series:hover:after {
-  background: #f47b6e;
-}
-
-.switch__label_type_sport:hover:before,
-.switch__label_type_sport:hover:after {
-  background: #4db37c;
-}
-
-.switch__label_type_talk-show:hover:before,
-.switch__label_type_talk-show:hover:after {
-  background: #ad6beb;
 }
 
 .week-switch__name_day_friday:after {
