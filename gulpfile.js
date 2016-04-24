@@ -81,7 +81,7 @@ gulp.task('html', function() {
         .pipe(handlebars(templateData, options))
         .pipe(rename({extname: ".html"}))
         .pipe(inlineImagePath({path:"dist/images"}))
-        .pipe(gulp.dest('/dist'))
+        .pipe(gulp.dest(''))
         .pipe(reload({ stream: true }));
 });
 
