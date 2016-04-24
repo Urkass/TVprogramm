@@ -1,7 +1,7 @@
 .header
 {
   background: $white;
-  height: 170px;
+  height: 200px;
   width: 100%;
   position: absolute;
   z-index: -1;
@@ -10,7 +10,7 @@
     height: 130px;
   }
   @include small{
-    height: 80px;
+    height: 85px;
   }
 }
 #switch1:checked ~ * .broadcast{
